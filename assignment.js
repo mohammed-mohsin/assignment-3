@@ -1,0 +1,57 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+/* Feet To Mile  Function */
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+function feetToMile(feet) {
+  if (feet < 0) {
+    return "Distance can't be negative";
+  }
+  const mile = feet / 5280;
+  return feet + " feet equals to " + mile.toFixed(4) + " mile";
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/* Wood Calculator  Function */
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+function woodCalculator(chair, table, bed) {
+  if (chair < 0 || table < 0 || bed < 0) return "Value can't be negative";
+  let totalWood = chair * 1 + table * 3 + bed * 5;
+
+  return "You need " + totalWood + " cubic feet wood.";
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/* Brick Calculator  Function */
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+function brickCalculator(floor) {
+  let floorHeight;
+  if (floor <= 10) {
+    floorHeight = floor * 15;
+  } else if (floor <= 20) {
+    floorHeight = (floor - 10) * 12 + 150;
+  } else {
+    floorHeight = (floor - 20) * 10 + 270;
+  }
+  let totalBrick = floorHeight * 1000;
+  return floor + " floor needs " + totalBrick + " bricks";
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/* Tiny Friend  Function */
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+function tinyfriend(list) {
+  let tinyName = list[0];
+  for (let i = 0; i < list.length; i++) {
+    let size = list[i].length;
+
+    if (size < tinyName.length) tinyName = list[i];
+  }
+  return tinyName;
+}
+
+
+
